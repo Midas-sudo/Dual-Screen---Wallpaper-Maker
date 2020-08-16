@@ -1,12 +1,13 @@
 <?php
 ksort($_POST);
 
-$args = "";
-foreach($_POST as $x=>$x_value) {
-    $args = $args . " " . urlencode($x_value);
-}
+$coords = $_GET['coords'];
 
-$command = "python2 horarios.py $args";
+$coord = str_replace("%20", " ", $coords);
+
+$command = "python cutter.py $coords";
 
 echo shell_exec($command);
+
+header( 'Location: /index.html' );
 ?>
