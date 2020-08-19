@@ -9,5 +9,5 @@ $command = "python cutter.py $coords";
 
 echo shell_exec($command);
 
-header( 'Location: /index.html' );
+//header( 'Location: /index.html' );
 ?>

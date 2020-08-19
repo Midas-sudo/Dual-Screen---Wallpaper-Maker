@@ -19,5 +19,5 @@ cropped2     = imageObject.crop((round(int(float(sys.argv[5]))),round(int(float(
 
 # Display the cropped portion
 
-cropped1.show()
-cropped2.show()
+cropped1.save("./1.jpeg", "jpeg")
+cropped2.save("./2.jpeg", "jpeg")
